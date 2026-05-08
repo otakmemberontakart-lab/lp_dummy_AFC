@@ -14,25 +14,27 @@
     html { scroll-behavior: smooth; }
 
     :root {
-      --midnight:      #080C16;
-      --navy-deep:     #0D1120;
-      --navy-card:     #131A2B;
-      --navy-border:   #1E2A40;
-      --gold:          #C9A84C;
-      --gold-light:    #E8C97A;
-      --gold-muted:    rgba(201,168,76,0.25);
-      --gold-glow:     rgba(201,168,76,0.12);
-      --text-primary:  #F0EDE6;
-      --text-secondary:#A89F91;
-      --text-muted:    #5C5650;
+      --midnight:      #0C0A0A;
+      --navy-deep:     #111010;
+      --navy-card:     #1A1616;
+      --navy-border:   #2A2020;
+      --gold:          #E8440A;
+      --gold-light:    #FF6B35;
+      --gold-muted:    rgba(232,68,10,0.28);
+      --gold-glow:     rgba(232,68,10,0.10);
+      --text-primary:  #F5F0EC;
+      --text-secondary:#B5A99F;
+      --text-muted:    #6B5F5A;
       --success:       #4CAF82;
+      --accent-warm:   #FF8C42;
+      --accent-deep:   #C43308;
     }
 
     body {
       background: var(--midnight);
       color: var(--text-primary);
       font-family: 'Inter', sans-serif;
-      font-size: 16px;
+      font-size: 20px;
       line-height: 1.7;
       overflow-x: hidden;
     }
@@ -46,7 +48,7 @@
 
     .label {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 11px;
+      font-size: 13px;
       font-weight: 500;
       letter-spacing: 0.16em;
       text-transform: uppercase;
@@ -77,9 +79,9 @@
       to   { transform: scale(1.0); }
     }
     @keyframes ctaPulse {
-      0%   { box-shadow: 0 0 0 0 rgba(201,168,76,0.5); }
-      70%  { box-shadow: 0 0 0 14px rgba(201,168,76,0); }
-      100% { box-shadow: 0 0 0 0 rgba(201,168,76,0); }
+      0%   { box-shadow: 0 0 0 0 rgba(232,68,10,0.55); }
+      70%  { box-shadow: 0 0 0 16px rgba(232,68,10,0); }
+      100% { box-shadow: 0 0 0 0 rgba(232,68,10,0); }
     }
     @keyframes lineGrow {
       from { width: 0; }
@@ -159,10 +161,10 @@
       inset: 0;
       background: linear-gradient(
         to bottom,
-        rgba(8,12,22,0.3) 0%,
-        rgba(8,12,22,0.2) 30%,
-        rgba(8,12,22,0.7) 65%,
-        rgba(8,12,22,0.97) 100%
+        rgba(12,10,10,0.3) 0%,
+        rgba(12,10,10,0.2) 30%,
+        rgba(12,10,10,0.75) 65%,
+        rgba(12,10,10,0.97) 100%
       );
     }
 
@@ -189,7 +191,7 @@
     }
 
     .hero-headline {
-      font-size: clamp(30px, 7vw, 58px);
+      font-size: clamp(37px, 7vw, 71px);
       font-weight: 900;
       color: var(--text-primary);
       margin-bottom: 24px;
@@ -202,7 +204,7 @@
     }
 
     .hero-sub {
-      font-size: clamp(15px, 2.5vw, 18px);
+      font-size: clamp(18px, 2.5vw, 22px);
       color: var(--text-secondary);
       line-height: 1.75;
       margin-bottom: 40px;
@@ -220,9 +222,9 @@
       justify-content: center;
       gap: 10px;
       background: var(--gold);
-      color: #08090C;
+      color: #FFFFFF;
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(14px, 2vw, 17px);
+      font-size: clamp(17px, 2vw, 21px);
       font-weight: 700;
       letter-spacing: 0.02em;
       padding: 18px 36px;
@@ -296,7 +298,7 @@
     .section-label { margin-bottom: 16px; }
 
     .section-headline {
-      font-size: clamp(24px, 5vw, 40px);
+      font-size: clamp(29px, 5vw, 49px);
       font-weight: 700;
       margin-bottom: 32px;
       position: relative;
@@ -313,11 +315,7 @@
     .section-headline.in-view::after { width: 48px; }
 
     .problem-body {
-      font-size: clamp(15px, 2vw, 17px);
-      color: var(--text-secondary);
-      line-height: 1.85;
-    }
-    .problem-body p { margin-bottom: 20px; }
+      font-size: clamp(18px, 2vw, 21px);
     .problem-body p:last-child { margin-bottom: 0; }
 
     .problem-list {
@@ -331,9 +329,7 @@
       display: flex;
       align-items: flex-start;
       gap: 14px;
-      font-size: 15px;
-      color: var(--text-secondary);
-      padding: 16px 20px;
+      font-size: 18px;
       background: rgba(255,255,255,0.03);
       border: 1px solid var(--navy-border);
       border-left: 2px solid var(--gold-muted);
@@ -357,79 +353,14 @@
     }
     .callout-dark p {
       font-family: 'Fraunces', serif;
-      font-size: clamp(17px, 2.5vw, 21px);
+      font-size: clamp(20px, 2.5vw, 25px);
       font-style: italic;
       color: var(--text-primary);
       line-height: 1.5;
       margin: 0;
     }
 
-    /* ─────────────────────────────────────────
-       SOCIAL PROOF 1
-    ───────────────────────────────────────── */
-    #social-proof-1 {
-      background: var(--midnight);
-      padding: 80px 0;
-    }
 
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-      margin-top: 40px;
-    }
-
-    .review-card {
-      background: var(--navy-card);
-      border: 1px solid var(--navy-border);
-      border-radius: 6px;
-      padding: 24px;
-      transition: border-color 0.3s ease;
-    }
-    .review-card:hover { border-color: var(--gold-muted); }
-
-    .review-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 14px;
-    }
-    .review-avatar {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold-muted), var(--navy-border));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Fraunces', serif;
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--gold);
-      flex-shrink: 0;
-    }
-    .review-meta { flex: 1; }
-    .review-name {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text-primary);
-    }
-    .review-role {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }
-    .review-stars {
-      color: var(--gold);
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-    .review-text {
-      font-size: 14px;
-      color: var(--text-secondary);
-      line-height: 1.75;
-    }
 
 
     /* ─────────────────────────────────────────
@@ -477,10 +408,7 @@
 
     .belief-body {
       color: var(--text-secondary);
-      font-size: clamp(15px, 2vw, 17px);
-      line-height: 1.85;
-    }
-    .belief-body p { margin-bottom: 20px; }
+      font-size: clamp(18px, 2vw, 21px);
 
     .old-new-box {
       display: grid;
@@ -537,9 +465,9 @@
     }
 
     .product-name {
-      font-size: clamp(32px, 7vw, 52px);
+      font-size: clamp(39px, 7vw, 63px);
       font-weight: 900;
-      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, #8B6914 100%);
+      background: linear-gradient(135deg, #FF8C42 0%, #E8440A 50%, #9E2A05 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -548,17 +476,14 @@
     }
 
     .product-tagline {
-      font-size: clamp(14px, 2vw, 16px);
+      font-size: clamp(17px, 2vw, 20px);
       color: var(--text-muted);
       font-style: italic;
       margin-bottom: 24px;
     }
 
     .product-description {
-      font-size: clamp(15px, 2vw, 17px);
-      color: var(--text-secondary);
-      line-height: 1.85;
-      text-align: left;
+      font-size: clamp(18px, 2vw, 21px);
       max-width: 520px;
       margin: 0 auto;
     }
@@ -630,7 +555,7 @@
     }
     .kode-icon { font-size: 20px; }
     .kode-desc {
-      font-size: 14px;
+      font-size: 17px;
       color: var(--text-secondary);
       line-height: 1.75;
     }
@@ -672,13 +597,13 @@
     .inside-info {}
     .inside-title {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 15px;
+      font-size: 18px;
       font-weight: 700;
       color: var(--text-primary);
       margin-bottom: 4px;
     }
     .inside-desc {
-      font-size: 13px;
+      font-size: 16px;
       color: var(--text-secondary);
       line-height: 1.65;
     }
@@ -752,7 +677,7 @@
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      font-size: 14px;
+      font-size: 17px;
       line-height: 1.6;
     }
     .for-list li { color: var(--text-secondary); }
@@ -760,13 +685,6 @@
     .check { color: var(--success); font-size: 15px; flex-shrink: 0; margin-top: 1px; }
     .cross { color: var(--text-muted); font-size: 15px; flex-shrink: 0; margin-top: 1px; }
 
-    /* ─────────────────────────────────────────
-       SOCIAL PROOF 2
-    ───────────────────────────────────────── */
-    #social-proof-2 {
-      background: var(--navy-deep);
-      padding: 80px 0;
-    }
 
     /* ─────────────────────────────────────────
        OFFER / PRICE
@@ -784,14 +702,14 @@
     }
 
     .offer-header {
-      background: linear-gradient(135deg, #1A1400, #0D0B00);
+      background: linear-gradient(135deg, #1A0A08, #0D0604);
       border-bottom: 1px solid var(--gold-muted);
       padding: 36px 36px 32px;
       text-align: center;
     }
 
     .offer-headline {
-      font-size: clamp(22px, 4vw, 32px);
+      font-size: clamp(27px, 4vw, 39px);
       font-weight: 700;
       margin-bottom: 8px;
     }
@@ -816,7 +734,7 @@
       display: flex;
       align-items: center;
       gap: 14px;
-      font-size: 14px;
+      font-size: 17px;
       color: var(--text-secondary);
     }
     .offer-includes li::before {
@@ -839,7 +757,7 @@
     }
     .price-main {
       font-family: 'Fraunces', serif;
-      font-size: clamp(44px, 10vw, 72px);
+      font-size: clamp(54px, 10vw, 88px);
       font-weight: 900;
       line-height: 1;
       background: linear-gradient(135deg, var(--gold-light), var(--gold));
@@ -848,7 +766,7 @@
       background-clip: text;
     }
     .price-label {
-      font-size: 13px;
+      font-size: 15px;
       color: var(--text-muted);
       margin-top: 6px;
     }
@@ -908,7 +826,7 @@
       padding: 22px 24px;
       cursor: pointer;
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 15px;
+      font-size: 18px;
       font-weight: 500;
       color: var(--text-primary);
       user-select: none;
@@ -941,7 +859,7 @@
 
     .faq-answer-inner {
       padding: 0 24px 24px;
-      font-size: 14px;
+      font-size: 17px;
       color: var(--text-secondary);
       line-height: 1.8;
     }
@@ -973,9 +891,9 @@
       inset: 0;
       background: linear-gradient(
         to bottom,
-        rgba(8,12,22,0.85) 0%,
-        rgba(8,12,22,0.65) 40%,
-        rgba(8,12,22,0.92) 100%
+        rgba(12,10,10,0.85) 0%,
+        rgba(12,10,10,0.65) 40%,
+        rgba(12,10,10,0.92) 100%
       );
     }
 
@@ -987,15 +905,13 @@
     }
 
     .final-headline {
-      font-size: clamp(28px, 6vw, 50px);
+      font-size: clamp(34px, 6vw, 61px);
       font-weight: 900;
       margin-bottom: 20px;
     }
 
     .final-sub {
-      font-size: clamp(15px, 2vw, 18px);
-      color: var(--text-secondary);
-      max-width: 500px;
+      font-size: clamp(18px, 2vw, 22px);
       margin: 0 auto 40px;
       line-height: 1.75;
     }
@@ -1022,7 +938,7 @@
       left: 0;
       right: 0;
       z-index: 999;
-      background: rgba(8,12,22,0.96);
+      background: rgba(12,10,10,0.97);
       backdrop-filter: blur(12px);
       border-top: 1px solid var(--gold-muted);
       padding: 12px 20px;
@@ -1050,7 +966,7 @@
     .btn-sticky {
       flex-shrink: 0;
       background: var(--gold);
-      color: #08090C;
+      color: #FFFFFF;
       font-family: 'Space Grotesk', sans-serif;
       font-size: 13px;
       font-weight: 700;
@@ -1084,7 +1000,6 @@
        RESPONSIVE
     ───────────────────────────────────────── */
     @media (min-width: 560px) {
-      .reviews-grid { grid-template-columns: 1fr 1fr; }
       .for-who-grid { grid-template-columns: 1fr 1fr; }
       .kode-3r { gap: 12px; }
       .sticky-label { display: block; }
@@ -1179,69 +1094,6 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SOCIAL PROOF 1
-════════════════════════════════════════ -->
-<section id="social-proof-1">
-  <div class="container">
-    <div class="will-animate">
-      <p class="label section-label">Bukan Cuma Kamu Yang Ngerasain Ini</p>
-    </div>
-    <h2 class="section-headline will-animate">Yang Terjadi Setelah Orang Mulai Baca Atasannya Dengan Cara Berbeda</h2>
-
-    <div class="reviews-grid">
-
-      <div class="review-card will-animate delay-1">
-        <div class="review-header">
-          <div class="review-avatar">R</div>
-          <div class="review-meta">
-            <div class="review-name">Rizky A.</div>
-            <div class="review-role">Staff Marketing, Jakarta</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text" style="margin-top:10px">"Sebelumnya sering banget salah timing ngomong ke bos. Sekarang gue tahu dulu dia lagi dalam mode apa sebelum maju. Bedanya kerasa banget di cara dia ngerespon gue."</p>
-      </div>
-
-      <div class="review-card will-animate delay-2">
-        <div class="review-header">
-          <div class="review-avatar">D</div>
-          <div class="review-meta">
-            <div class="review-name">Dina S.</div>
-            <div class="review-role">Admin Finance, Surabaya</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text" style="margin-top:10px">"Yang paling gue suka itu Boss Timing Map-nya. Simple tapi beneran ngebantu. Sekarang nggak asal nyerocos kalau atasan keliatan nggak dalam mood yang baik."</p>
-      </div>
-
-      <div class="review-card will-animate delay-3">
-        <div class="review-header">
-          <div class="review-avatar">F</div>
-          <div class="review-meta">
-            <div class="review-name">Fajar P.</div>
-            <div class="review-role">Supervisor Operasional, Bandung</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text" style="margin-top:10px">"Ternyata yang bikin gue belum naik bukan kerjaan gue, tapi cara gue bersikap di depan atasan. Setelah baca ini, langsung kerasa ada yang berubah dari cara dia ngeliat gue."</p>
-      </div>
-
-      <div class="review-card will-animate delay-4">
-        <div class="review-header">
-          <div class="review-avatar">A</div>
-          <div class="review-meta">
-            <div class="review-name">Ayu R.</div>
-            <div class="review-role">HRD Staff, Yogyakarta</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text" style="margin-top:10px">"Script pack-nya itu gold. Gue selama ini nggak pernah tahu cara minta feedback ke atasan dengan cara yang terlihat matang. Sekarang udah pede buat lakuinnya."</p>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- ═══════════════════════════════════════
      BELIEF SHIFT
@@ -1450,67 +1302,6 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SOCIAL PROOF 2
-════════════════════════════════════════ -->
-<section id="social-proof-2" class="grain">
-  <div class="container">
-    <div class="will-animate">
-      <p class="label section-label">Lebih Banyak Yang Sudah Merasakannya</p>
-    </div>
-    <h2 class="section-headline will-animate">Ini Yang Mereka Rasakan di Minggu Pertama</h2>
-
-    <div class="reviews-grid">
-      <div class="review-card will-animate delay-1">
-        <div class="review-header">
-          <div class="review-avatar">B</div>
-          <div class="review-meta">
-            <div class="review-name">Bagas W.</div>
-            <div class="review-role">Account Executive, Jakarta</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text" style="margin-top:10px">"Langsung coba 7-Day Reset-nya. Di hari ke-4 gue nggak langsung defensif waktu bos ngasih feedback negatif. Dia kayak kaget sendiri ngeliat gue lebih tenang dari biasanya."</p>
-      </div>
-
-      <div class="review-card will-animate delay-2">
-        <div class="review-header">
-          <div class="review-avatar">S</div>
-          <div class="review-meta">
-            <div class="review-name">Sari M.</div>
-            <div class="review-role">Staf Administrasi, Semarang</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text" style="margin-top:10px">"Selama ini pikiran gue 'yang penting kerja bagus'. Ternyata itu aja nggak cukup. Setelah baca ini gue paham kenapa ada orang yang kelihatan 'lebih siap' di mata atasan meski kerjanya sama."</p>
-      </div>
-
-      <div class="review-card will-animate delay-3">
-        <div class="review-header">
-          <div class="review-avatar">H</div>
-          <div class="review-meta">
-            <div class="review-name">Hendra K.</div>
-            <div class="review-role">Team Leader, Bekasi</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text" style="margin-top:10px">"Cheat sheet-nya praktis banget. Gue cetak dan taro di meja. Jadi reminder tiap pagi sebelum meeting. Serius, ini harusnya diajarkan dari awal masuk kerja."</p>
-      </div>
-
-      <div class="review-card will-animate delay-4">
-        <div class="review-header">
-          <div class="review-avatar">N</div>
-          <div class="review-meta">
-            <div class="review-name">Nina T.</div>
-            <div class="review-role">Marketing Staff, Medan</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text" style="margin-top:10px">"Dengan harga segini dapet banyak banget. Gue udah beli banyak ebook karier tapi ini yang paling langsung bisa dipraktikkan. Bukan teori doang."</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ═══════════════════════════════════════
      OFFER
