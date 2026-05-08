@@ -14,20 +14,20 @@
     html { scroll-behavior: smooth; }
 
     :root {
-      --midnight:      #0C0A0A;
-      --navy-deep:     #111010;
-      --navy-card:     #1A1616;
-      --navy-border:   #2A2020;
-      --gold:          #E8440A;
-      --gold-light:    #FF6B35;
-      --gold-muted:    rgba(232,68,10,0.28);
-      --gold-glow:     rgba(232,68,10,0.10);
-      --text-primary:  #F5F0EC;
-      --text-secondary:#B5A99F;
-      --text-muted:    #6B5F5A;
+      --midnight:      #0F0A08;
+      --navy-deep:     #1A0E08;
+      --navy-card:     #241208;
+      --navy-border:   #3D1F0D;
+      --gold:          #FF4500;
+      --gold-light:    #FF7043;
+      --gold-muted:    rgba(255,69,0,0.30);
+      --gold-glow:     rgba(255,69,0,0.12);
+      --text-primary:  #FAF4EF;
+      --text-secondary:#C4AFA6;
+      --text-muted:    #7A6560;
       --success:       #4CAF82;
       --accent-warm:   #FF8C42;
-      --accent-deep:   #C43308;
+      --accent-deep:   #CC2200;
     }
 
     body {
@@ -79,9 +79,9 @@
       to   { transform: scale(1.0); }
     }
     @keyframes ctaPulse {
-      0%   { box-shadow: 0 0 0 0 rgba(232,68,10,0.55); }
-      70%  { box-shadow: 0 0 0 16px rgba(232,68,10,0); }
-      100% { box-shadow: 0 0 0 0 rgba(232,68,10,0); }
+      0%   { box-shadow: 0 0 0 0 rgba(255,69,0,0.6); }
+      70%  { box-shadow: 0 0 0 16px rgba(255,69,0,0); }
+      100% { box-shadow: 0 0 0 0 rgba(255,69,0,0); }
     }
     @keyframes lineGrow {
       from { width: 0; }
@@ -161,10 +161,11 @@
       inset: 0;
       background: linear-gradient(
         to bottom,
-        rgba(12,10,10,0.3) 0%,
-        rgba(12,10,10,0.2) 30%,
-        rgba(12,10,10,0.75) 65%,
-        rgba(12,10,10,0.97) 100%
+        rgba(10,6,4,0.55) 0%,
+        rgba(10,6,4,0.50) 25%,
+        rgba(10,6,4,0.80) 55%,
+        rgba(10,6,4,0.97) 80%,
+        rgba(10,6,4,1.00) 100%
       );
     }
 
@@ -467,7 +468,7 @@
     .product-name {
       font-size: clamp(39px, 7vw, 63px);
       font-weight: 900;
-      background: linear-gradient(135deg, #FF8C42 0%, #E8440A 50%, #9E2A05 100%);
+      background: linear-gradient(135deg, #FF8C42 0%, #FF4500 50%, #AA2000 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -702,7 +703,7 @@
     }
 
     .offer-header {
-      background: linear-gradient(135deg, #1A0A08, #0D0604);
+      background: linear-gradient(135deg, #1F0A04, #100402);
       border-bottom: 1px solid var(--gold-muted);
       padding: 36px 36px 32px;
       text-align: center;
@@ -891,9 +892,9 @@
       inset: 0;
       background: linear-gradient(
         to bottom,
-        rgba(12,10,10,0.85) 0%,
-        rgba(12,10,10,0.65) 40%,
-        rgba(12,10,10,0.92) 100%
+        rgba(10,6,4,0.88) 0%,
+        rgba(10,6,4,0.70) 40%,
+        rgba(10,6,4,0.94) 100%
       );
     }
 
